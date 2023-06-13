@@ -27,7 +27,7 @@ public class AdsController {
 
     @GetMapping("{id}")
     public ResponseEntity<Ads> getAd(@PathVariable int id){
-        Ads ads = AdsServices.getAdById(id);
+        Ads ads = adsServices.getAdById(id);
         return ResponseEntity.ok().body(ads);
     }
 
